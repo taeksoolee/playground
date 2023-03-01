@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Ling</title>
+  <style>
+    :root {
+      /* --loading-color: #fff000; */
+      --loading-color: skyblue;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #262626;
+    }
+
+    .ring-container {
+      margin: 20px;
+    }
+
+    .ring {
+
+      position: absolute;
+      /* top: 50%;
+      left: 50%; */
+      /* transform: translate(-50%, -50%); */
+      width: 150px;
+      height: 150px;
+      background-color: transparent;
+      border: 3px solid #3c3c3c;
+      border-radius: 50%;
+
+    }
+
+    .ring-text {
+      margin: 0;
+      text-align: center;
+      line-height: 150px;
+      font-size: 20px;
+      color: var(--loading-color);
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px var(--loading-color);
+      box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+
+      text-transform: uppercase;
+    }
+
+    .ring::before {
+      content: '';
+
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid var(--loading-color);
+      border-right: 3px solid var(--loading-color);
+      border-radius: 50%;
+      animation: animateRing 2s linear infinite;
+    }
+
+    .ring-circle {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 3px;
+      /* background-color: var(--loading-color); */
+      transform-origin: left;
+      animation: animateRing 2s linear infinite;
+    }
+
+    .ring-circle::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      top: 46px;
+      right: 12px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--loading-color);
+      box-shadow: 0 0 20px var(--loading-color);
+    }
+
+    @keyframes animateRing {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ring-container">
+    <div class="ring">
+      <p class="ring-text">Loading</p>
+      <span class="ring-circle"></span>
+    </div>
+  </div>
+</body>
+
+</html>
