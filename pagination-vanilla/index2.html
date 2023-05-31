@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Table</title>
+</head>
+<body>
+  <div class="mt-4">
+    <h1 class="text-4xl text-center">User List Table</h1>
+  </div>
+  <div class="flex flex-col items-center">
+    <table id="userTable" class="m-2 ">
+      <!-- <caption class="text-end">
+        <button class="p-2 ml-2 mb-2 border-primary border-2 rounded-md">Add</button>
+      </caption> -->
+      <thead>
+        <tr>
+          <th class="w-12 p-2 border-2 border-primary">Id</th>
+          <th class="w-40 p-2 border-2 border-primary">FIrst Name</th>
+          <th class="w-40 p-2 border-2 border-primary">Last Name</th>
+          <th class="w-20 p-2 border-2 border-primary">Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-2 border-2 border-primary">1</td>
+          <td class="p-2 border-2 border-primary">Taeksoo</td>
+          <td class="p-2 border-2 border-primary">Lee</td>
+          <td class="p-2 border-2 border-primary">True</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="text-center p-2 border-2 border-primary">
+            User List Table
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div id="paginationContainer" class="flex">
+      <div class="flex">
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 disabled:border-gray disabled:text-gray" first-page-btn>&lt;&lt;</button>
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 disabled:border-gray disabled:text-gray" previous-page-btn>&lt;</button>
+      </div>
+      <div id="pageinationNumbersContainer" class="flex">
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 active:bg-primary" move-page-btn page-num="1">1</button>
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 active:bg-primary" move-page-btn page-num="2">2</button>
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 active:bg-primary" move-page-btn page-num="3">3</button>
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 active:bg-primary" move-page-btn page-num="4">4</button>
+      </div>
+      <div class="flex">
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 disabled:border-gray disabled:text-gray" next-page-btn>&gt;</button>
+        <button class="flex justify-center items-center w-10 h-10 p-2 m-2 border-primary border-2 disabled:border-gray disabled:text-gray" last-page-btn>&gt;&gt;</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="module">
+  import tailwind from '../../tailwind.config.js'
+  window.tailwind.config = tailwind;
+</script>
+<script src="./index2.js"></script>
+</html>
