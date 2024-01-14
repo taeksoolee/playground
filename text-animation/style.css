@@ -1,0 +1,75 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #2f3542;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.animated-text {
+  font-size: 34px;
+  font-weight: 600;
+
+  min-width: 280px;
+}
+
+.animated-text span {
+  position: relative;
+  left: 20px;
+}
+
+.animated-text span::before {
+  content: 'Youtuber';
+  color: red;
+  animation: word 20s infinite;
+}
+
+.animated-text span::after {
+  content: '';
+  background-color: #2f3542;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 2px solid red;
+  right: -8px;
+  animation: cursor .6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #2f3542;
+  }
+}
+
+@keyframes word {
+  0%, 20% {
+    content: 'Yotuber';
+  }
+  21%, 40% {
+    content: 'Blogger';
+  }
+  41%, 60% {
+    content: 'Developer';
+  }
+  61%, 80% {
+    content: 'Designer';
+  }
+  81%, 100% {
+    content: 'Gamer';
+  }
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 90%, 95% {
+      width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+      width: calc(100% + 8px);
+    }
+}
+
