@@ -1,0 +1,48 @@
+input {
+  border: 1px solid black;
+}
+
+input::placeholder {
+  color: lightgray;
+}
+
+input.error {
+  border: 1px solid red;
+  outline: none;
+}
+
+input.error:focus {
+  outline: 1px solid red;
+  border-radius: 3px;
+}
+
+.input-group {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  width: 100%;
+}
+
+.input-group input {
+  display: block;
+  width: 100%;
+  padding: 4px;
+}
+
+.input-group p.error {
+  color: red;
+  margin: 0;
+}
+
+[role=alert].error {
+  background-color: red;
+  color: white;
+  border-radius: 2px;
+  padding: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
